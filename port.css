@@ -573,7 +573,7 @@ h3 {
   flex-direction: column;
   padding-block: 30px 70px;
   padding-inline: 20px;
-  width: 100%;
+  width: 100% !important;
   background: var(--color-white);
   box-shadow: 1px 8px 10px 2px var(--first-color-hover);
   border-radius: 30px;
@@ -1160,6 +1160,9 @@ footer .top-footer p {
     height: auto;
     padding: 20px;
   }
+  .col {
+    width: 100%;
+  }
 
   .form-input {
     flex-direction: column; /* Stack input fields vertically */
@@ -1208,10 +1211,15 @@ footer .top-footer p {
   .about-info {
     width: 100%; /* Full width for better visibility */
     padding: 30px; /* Increase padding for better spacing */
+    margin: 0 auto; /* Center the container horizontally */
     height: auto; /* Let the height adjust based on content */
     background: var(--color-white); /* Optional: Add background color */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for emphasis */
-    border-radius: 20px;
+    border-radius: 20px; /* Optional: Add rounded corners */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center-align text */
   }
 
   .featured-image img {
