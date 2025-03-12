@@ -75,6 +75,9 @@ body {
   position: relative;
 }
 
+.container {
+  overflow: auto; /* Allow scrolling if content overflows */
+}
 nav {
   position: fixed;
   display: flex;
@@ -127,7 +130,7 @@ nav {
 /* Nav Menu Styling */
 .nav_menu_list {
   display: flex;
-  gap: 20px; /* Space between menu items */
+  gap: 10px; /* Space between menu items */
   list-style: none;
 }
 
@@ -269,8 +272,11 @@ active-link::after {
   .nav-button {
     display: none; /* Remove this if you want the button to be visible on small screens */
   }
-  .nav-menu.responsive {
-    left: 0;
+  .nav-menu {
+    display: none;
+  }
+  .nav-menu-btn {
+    display: block;
   }
 
   .nav-menu {
@@ -302,7 +308,7 @@ active-link::after {
   .featured-box {
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
   }
   .nav-menu.active {
     display: block;
@@ -339,7 +345,7 @@ active-link::after {
 .featured-box {
   position: relative;
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   min-height: 700px;
 }
 
@@ -514,10 +520,12 @@ active-link::after {
 }
 
 .section {
-  padding-block: 5em;
+  padding-block: 2em;
   width: 100%;
 }
-
+.section {
+  border: 1px solid royalblue; /* Debugging style */
+}
 .row {
   display: flex;
   justify-content: space-between;
@@ -905,4 +913,287 @@ footer .top-footer p {
 .buttom-footer {
   font-size: 15px;
   margin-top: 10px;
+}
+@media only screen and (max-width: 768px) {
+  /* General adjustments for mobile screens */
+  body {
+    font-size: 14px; /* Smaller font size for mobile */
+  }
+
+  .container {
+    padding-inline: 5vw; /* Reduce padding for smaller screens */
+  }
+
+  .nav-menu {
+    padding-inline: 5vw; /* Adjust padding for mobile */
+  }
+
+  .nav-name {
+    font-size: 30px; /* Smaller logo text for mobile */
+  }
+
+  .nav-logo span {
+    font-size: 3em; /* Adjust the size of the logo span */
+  }
+
+  .nav-menu-btn {
+    display: block; /* Ensure the menu button is visible */
+  }
+
+  .nav-menu.responsive {
+    left: 0; /* Ensure the menu is visible when toggled */
+  }
+
+  .nav_menu_list {
+    flex-direction: column; /* Stack menu items vertically */
+    gap: 10px; /* Reduce gap between menu items */
+  }
+
+  .nav_link {
+    padding: 10px 0; /* Add padding to menu links */
+  }
+
+  .featured-box {
+    flex-direction: column; /* Stack content vertically */
+    height: auto; /* Allow height to adjust based on content */
+    min-height: auto; /* Remove fixed min-height */
+  }
+
+  .featured-text {
+    width: 100%; /* Full width for text content */
+    padding-left: 0; /* Remove left padding */
+    text-align: center; /* Center-align text */
+  }
+
+  .featured-name {
+    font-size: 30px; /* Smaller font size for mobile */
+  }
+
+  .featured-text-info {
+    font-size: 12px; /* Smaller font size for mobile */
+  }
+
+  .featured-image {
+    width: 100%; /* Full width for image */
+    min-height: auto; /* Remove fixed min-height */
+    margin-top: 20px; /* Add margin for spacing */
+  }
+
+  .social_icons {
+    justify-content: center; /* Center-align social icons */
+    margin-top: 2em; /* Adjust margin */
+  }
+
+  .project-container {
+    flex-direction: column; /* Stack project cards vertically */
+  }
+
+  .project-box {
+    width: 100%; /* Full width for project cards */
+    margin-bottom: 20px; /* Add margin for spacing */
+  }
+
+  .contact-info {
+    width: 100%; /* Full width for contact info */
+    max-width: 100%; /* Remove max-width restriction */
+  }
+
+  .form-input {
+    flex-direction: column; /* Stack input fields vertically */
+  }
+
+  .input-field {
+    width: 100%; /* Full width for input fields */
+  }
+
+  footer {
+    padding: 20px 10px; /* Reduce padding for footer */
+  }
+
+  .footer-menu {
+    flex-direction: column; /* Stack footer menu items vertically */
+    gap: 10px; /* Reduce gap between items */
+  }
+
+  .footer-social-icons {
+    justify-content: center; /* Center-align social icons */
+  }
+
+  .bottom-footer {
+    font-size: 12px; /* Smaller font size for mobile */
+  }
+  .row {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  /* Further adjustments for very small screens */
+  .nav-name {
+    font-size: 24px; /* Even smaller logo text */
+  }
+
+  .nav-logo span {
+    font-size: 2.5em; /* Adjust the size of the logo span */
+  }
+
+  .featured-name {
+    font-size: 24px; /* Smaller font size for mobile */
+  }
+
+  .featured-text-info {
+    font-size: 10px; /* Smaller font size for mobile */
+  }
+
+  .project-box {
+    height: 200px; /* Adjust height for smaller screens */
+  }
+
+  .contact-info {
+    padding: 15px 20px; /* Reduce padding for contact info */
+  }
+
+  .input-field {
+    height: 45px; /* Adjust height for input fields */
+  }
+
+  textarea {
+    height: 150px; /* Adjust height for textarea */
+  }
+
+  footer {
+    padding: 15px 5px; /* Further reduce padding for footer */
+  }
+
+  .footer-menu {
+    gap: 5px; /* Further reduce gap between items */
+  }
+
+  .footer-social-icons i {
+    font-size: 24px; /* Smaller social icons */
+  }
+
+  .bottom-footer {
+    font-size: 10px; /* Smaller font size for mobile */
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* General adjustments for mobile screens */
+  body {
+    font-size: 14px; /* Smaller font size for mobile */
+  }
+
+  .container {
+    padding-inline: 5vw; /* Reduce padding for smaller screens */
+  }
+
+  .nav-menu {
+    padding-inline: 5vw; /* Adjust padding for mobile */
+  }
+
+  .nav-name {
+    font-size: 30px; /* Smaller logo text for mobile */
+  }
+
+  .nav-logo span {
+    font-size: 3em; /* Adjust the size of the logo span */
+  }
+
+  .nav-menu-btn {
+    display: block; /* Ensure the menu button is visible */
+  }
+
+  .nav-menu.responsive {
+    left: 0; /* Ensure the menu is visible when toggled */
+  }
+
+  .nav_menu_list {
+    flex-direction: column; /* Stack menu items vertically */
+    gap: 10px; /* Reduce gap between menu items */
+  }
+
+  .nav_link {
+    padding: 10px 0; /* Add padding to menu links */
+  }
+
+  .featured-box {
+    flex-direction: column; /* Stack content vertically */
+    height: auto; /* Allow height to adjust based on content */
+    min-height: auto; /* Remove fixed min-height */
+  }
+
+  .featured-text {
+    width: 100%; /* Full width for text content */
+    padding-left: 0; /* Remove left padding */
+    text-align: center; /* Center-align text */
+  }
+
+  .featured-name {
+    font-size: 30px; /* Smaller font size for mobile */
+  }
+
+  .featured-text-info {
+    font-size: 12px; /* Smaller font size for mobile */
+  }
+
+  .featured-image {
+    width: 100%; /* Full width for image */
+    min-height: auto; /* Remove fixed min-height */
+    margin-top: 20px; /* Add margin for spacing */
+  }
+
+  .social_icons {
+    justify-content: center; /* Center-align social icons */
+    margin-top: 2em; /* Adjust margin */
+  }
+
+  .project-container {
+    flex-direction: column; /* Stack project cards vertically */
+  }
+
+  .project-box {
+    width: 100%; /* Full width for project cards */
+    margin-bottom: 20px; /* Add margin for spacing */
+  }
+
+  .contact-info {
+    width: 100%; /* Full width for contact info */
+    max-width: 100%; /* Remove max-width restriction */
+  }
+
+  .form-input {
+    flex-direction: column; /* Stack input fields vertically */
+  }
+
+  .input-field {
+    width: 100%; /* Full width for input fields */
+  }
+
+  footer {
+    padding: 20px 10px; /* Reduce padding for footer */
+  }
+
+  .footer-menu {
+    flex-direction: column; /* Stack footer menu items vertically */
+    gap: 10px; /* Reduce gap between items */
+  }
+
+  .footer-social-icons {
+    justify-content: center; /* Center-align social icons */
+  }
+
+  .bottom-footer {
+    font-size: 12px; /* Smaller font size for mobile */
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .nav-menu-btn {
+    display: none; /* Hide the nav-menu button on small screens */
+  }
+}
+.nav-menu {
+  z-index: 1000; /* This might overlap other content */
 }
