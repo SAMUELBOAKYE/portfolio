@@ -611,6 +611,44 @@ h3 {
   gap: 5px;
   overflow-x: auto;
 }
+.skill-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.skill-progress {
+  flex-grow: 1;
+  height: 10px;
+  background: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 5px;
+  transition: width 0.5s ease;
+}
+
+.skill-percentage {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-color-second);
+}
+
+.progress-bar[style*="90%"] { background: #4caf50; } /* Green */
+.progress-bar[style*="85%"] { background: #8bc34a; } /* Light Green */
+.progress-bar[style*="80%"] { background: #cddc39; } /* Lime */
+.progress-bar[style*="75%"] { background: #ffeb3b; } /* Yellow */
+.progress-bar[style*="70%"] { background: #ffc107; } /* Amber */
+.progress-bar[style*="65%"] { background: #ff9800; } /* Orange */
+.progress-bar[style*="60%"] { background: #ff5722; } /* Deep Orange */
+.progress-bar[style*="55%"] { background: #f44336; } /* Red */
+.progress-bar[style*="50%"] { background: #e91e63; } 
+
+
 
 .skills-list span {
   font-size: 14px;
@@ -1245,6 +1283,28 @@ footer .top-footer p {
   textarea {
     height: 150px; /* Reduce height for textarea */
   }
+.skill-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .skill-progress {
+    width: 100%;
+  }
+
+  .skill-percentage {
+    font-size: 12px;
+  }
+
+  .skills-header {
+    font-size: 16px;
+  }
+
+  .skill-box {
+    padding: 15px;
+  }
+  
 }
 .nav-menu {
   z-index: 1000; /* This might overlap other content */
