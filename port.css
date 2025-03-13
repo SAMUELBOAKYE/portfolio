@@ -1316,3 +1316,43 @@ footer .top-footer p {
 .nav-menu {
   z-index: 1000; /* This might overlap other content */
 }
+
+/* General Styling for Large Screens */
+@media only screen and (min-width: 1024px) {
+  .skill-box {
+    padding: 30px; /* Increase padding for larger screens */
+  }
+
+  .skills-header {
+    font-size: 22px; /* Larger font size for headers */
+    margin-bottom: 20px; /* Increase spacing below headers */
+  }
+
+  .skill-item {
+    gap: 20px; /* Increase spacing between skill items */
+  }
+
+  .skill-progress {
+    height: 12px; /* Thicker progress bars for better visibility */
+  }
+
+  .progress-bar {
+    height: 100%; /* Ensure the progress bar fills the container */
+  }
+
+  .skill-percentage {
+    font-size: 16px; /* Larger font size for percentages */
+    font-weight: 600; /* Bold text for better readability */
+  }
+
+  /* Color Coding for Skill Levels */
+  .progress-bar[style*="90%"] { background: #4caf50; } /* Green */
+  .progress-bar[style*="85%"] { background: #8bc34a; } /* Light Green */
+  .progress-bar[style*="80%"] { background: #cddc39; } /* Lime */
+  .progress-bar[style*="75%"] { background: #ffeb3b; } /* Yellow */
+  .progress-bar[style*="70%"] { background: #ffc107; } /* Amber */
+  .progress-bar[style*="65%"] { background: #ff9800; } /* Orange */
+  .progress-bar[style*="60%"] { background: #ff5722; } /* Deep Orange */
+  .progress-bar[style*="55%"] { background: #f44336; } /* Red */
+  .progress-bar[style*="50%"] { background: #e91e63; } /* Pink */
+}
